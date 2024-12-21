@@ -29,7 +29,7 @@ header {
 }
 
 .product {
-    width: 90%;
+    width: 100%;
     margin: 1%;
     border-radius: 8px;
     text-align: center;
@@ -97,6 +97,18 @@ header {
 }
 
 /* Медиа-запросы для адаптивного дизайна */
+@media (min-width: 600px) {
+    .product {
+        width: 48%;
+    }
+}
+
+@media (min-width: 900px) {
+    .product {
+        width: 23%;
+    }
+}
+
 @media (max-width: 599px) {
     .product {
         width: 90%;
@@ -117,24 +129,6 @@ header {
     .whatsapp-button, .youtube-button {
         padding: 0.5em 1em;
         font-size: 0.9em;
-    }
-}
-
-@media (min-width: 600px) and (orientation: portrait) {
-    .product {
-        width: 48%;
-    }
-}
-
-@media (min-width: 600px) and (orientation: landscape) {
-    .product {
-        width: 23%;
-    }
-}
-
-@media (min-width: 900px) {
-    .product {
-        width: 23%;
     }
 }
 
