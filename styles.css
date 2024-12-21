@@ -1,63 +1,99 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const gallery = document.getElementById('product-gallery');
-    const searchBar = document.getElementById('search-bar');
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+}
 
-    function displayProducts(filter = '') {
-        gallery.innerHTML = '';
-        const products = JSON.parse(localStorage.getItem('products')) || [];
-        const filteredProducts = products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+}
 
-        filteredProducts.forEach(product => {
-            const productDiv = document.createElement('div');
-            productDiv.classList.add('product');
+#search-bar {
+    width: 80%;
+    padding: 0.5em;
+    margin-top: 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
 
-            const img = document.createElement('img');
-            img.src = product.image;
-            img.alt = product.name;
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2em;
+}
 
-            const name = document.createElement('div');
-            name.classList.add('product-name');
-            name.textContent = product.name;
+.product {
+    width: 25%;
+    margin: 1%;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1em;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
 
-            const price = document.createElement('div');
-            price.classList.add('product-price');
-            price.textContent = product.price;
+.product:hover {
+    transform: scale(1.05);
+}
 
-            const buttonContainer = document.createElement('div');
-            buttonContainer.classList.add('button-container');
+.product img {
+    width: 100%;
+    height: 400px; /* Увеличенная высота для всех изображений */
+    object-fit: cover; /* Обрезать изображение, чтобы оно заполняло контейнер */
+    border-radius: 8px;
+}
 
-            const whatsappButton = document.createElement('button');
-            whatsappButton.classList.add('whatsapp-button');
-            whatsappButton.textContent = 'Заказать';
-            whatsappButton.addEventListener('click', function() {
-                window.open(`https://wa.me/YOUR_PHONE_NUMBER?text=Я хочу заказать ${product.name}`, '_blank');
-            });
+.product-name {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: #333;
+}
 
-            const youtubeButton = document.createElement('button');
-            youtubeButton.classList.add('youtube-button');
-            youtubeButton.textContent = 'Обзор на YouTube';
-            youtubeButton.addEventListener('click', function() {
-                window.open(product.video, '_blank');
-            });
+.product-price {
+    font-size: 1em;
+    color: #4CAF50;
+    margin-top: 0.5em;
+}
 
-            buttonContainer.appendChild(whatsappButton);
-            buttonContainer.appendChild(youtubeButton);
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
 
-            productDiv.appendChild(img);
-            productDiv.appendChild(name);
-            productDiv.appendChild(price);
-            productDiv.appendChild(buttonContainer);
+.whatsapp-button, .youtube-button {
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
 
-            gallery.appendChild(productDiv);
-        });
-    }
+.whatsapp-button:hover, .youtube-button:hover {
+    background: linear-gradient(to right, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
 
-    searchBar.addEventListener('input', function() {
-        displayProducts(searchBar.value);
-    });
-
-    // Отображение товаров при загрузке страницы
-    displayProducts();
-});
+.whatsapp-button:active, .youtube-button:active {
+    background: linear-gradient(to right, #388E3C, #4CAF50);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 
