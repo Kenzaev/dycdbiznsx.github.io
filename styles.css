@@ -29,7 +29,7 @@ header {
 }
 
 .product {
-    width: 45%; /* Ширина для мобильных устройств */
+    width: 90%;
     margin: 1%;
     border-radius: 8px;
     text-align: center;
@@ -99,27 +99,42 @@ header {
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 599px) {
     .product {
-        width: 45%; /* Два товара в ряду на мобильных устройствах */
+        width: 90%;
+    }
+
+    .product img {
+        height: 200px; /* Уменьшенная высота для мобильных устройств */
+    }
+
+    .product-name {
+        font-size: 1em;
+    }
+
+    .product-price {
+        font-size: 0.9em;
+    }
+
+    .whatsapp-button, .youtube-button {
+        padding: 0.5em 1em;
+        font-size: 0.9em;
     }
 }
 
-@media (min-width: 600px) and (max-width: 799px) {
+@media (min-width: 600px) and (orientation: portrait) {
     .product {
-        width: 45%; /* Два товара в ряду на планшетах */
+        width: 48%;
     }
 }
 
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 600px) and (orientation: landscape) {
     .product {
-        width: 30%; /* Три товара в ряду на небольших экранах компьютеров */
+        width: 23%;
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     .product {
-        width: 23%; /* Четыре товара в ряду на больших экранах компьютеров */
+        width: 23%;
     }
 }
-
-
 
