@@ -28,42 +28,60 @@ header {
     margin-top: 2em;
 }
 
-/* ... существующий код ... */
-
 .product {
-    width: 100%; /* Ширина для мобильных устройств */
-    margin: 1% 0; /* Увеличение отступа сверху и снизу */
+    width: 100%; /* Изменено для мобильных устройств */
+    margin: 1%;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1em;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-/* Медиа-запросы для адаптивного дизайна */
-@media (max-width: 599px) {
-    .product {
-        width: 100%; /* Один товар в ряду на мобильных устройствах */
-    }
+.product:hover {
+    transform: scale(1.05);
 }
 
-@media (min-width: 600px) and (orientation: portrait) {
-    .product {
-        width: 48%; /* Два товара в ряду на планшетах в портретном режиме */
-    }
+.product img {
+    width: 60%;
+    height: auto; /* Изменено для автоматической высоты изображений */
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-@media (min-width: 600px) and (orientation: landscape) {
-    .product {
-        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
-    }
+.product-name {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: #333;
 }
 
-@media (min-width: 900px) {
-    .product {
-        width: 20%; /* Пять товаров в ряду на компьютерах */
-    }
+.product-price {
+    font-size: 1em;
+    color: #4CAF50;
+    margin-top: 0.5em;
 }
 
-/* Улучшение стилей кнопок */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
 .whatsapp-button, .youtube-button {
-    padding: 1em 2em; /* Увеличение отступов для кнопок */
-    font-size: 1.1em; /* Увеличение размера шрифта */
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .whatsapp-button:hover, .youtube-button:hover {
@@ -81,19 +99,13 @@ header {
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 599px) {
     .product {
-        width: 48%; /* Два товара в ряду на мобильных устройствах */
+        width: 100%; /* Один товар в ряду на мобильных устройствах */
     }
 }
 
-@media (min-width: 600px) and (orientation: portrait) {
+@media (min-width: 600px) and (max-width: 899px) {
     .product {
-        width: 48%; /* Два товара в ряду на планшетах в портретном режиме */
-    }
-}
-
-@media (min-width: 600px) and (orientation: landscape) {
-    .product {
-        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
+        width: 48%; /* Два товара в ряду на планшетах */
     }
 }
 
