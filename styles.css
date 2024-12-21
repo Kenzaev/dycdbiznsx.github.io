@@ -29,7 +29,7 @@ header {
 }
 
 .product {
-    width: 90%;
+    width: 45%; /* Ширина для мобильных устройств */
     margin: 1%;
     border-radius: 8px;
     text-align: center;
@@ -99,42 +99,25 @@ header {
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 599px) {
     .product {
-        width: 90%;
-    }
-
-    .product img {
-        height: 200px; /* Уменьшенная высота для мобильных устройств */
-    }
-
-    .product-name {
-        font-size: 1em;
-    }
-
-    .product-price {
-        font-size: 0.9em;
-    }
-
-    .whatsapp-button, .youtube-button {
-        padding: 0.5em 1em;
-        font-size: 0.9em;
+        width: 45%; /* Два товара в ряду на мобильных устройствах */
     }
 }
 
 @media (min-width: 600px) and (orientation: portrait) {
     .product {
-        width: 48%;
+        width: 45%; /* Два товара в ряду на планшетах в портретном режиме */
     }
 }
 
 @media (min-width: 600px) and (orientation: landscape) {
     .product {
-        width: 23%;
+        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
     }
 }
 
 @media (min-width: 900px) {
     .product {
-        width: 23%;
+        width: 23%; /* Четыре товара в ряду на компьютерах */
     }
 }
 
