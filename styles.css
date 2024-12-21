@@ -28,6 +28,96 @@ header {
     margin-top: 2em;
 }
 
-.produc
+.product {
+    width: 48%; /* Ширина для мобильных устройств */
+    margin: 1%;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 1em;
+    position: relative;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
 
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    height: 200px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Обрезать изображение, чтобы оно заполняло контейнер */
+    border-radius: 8px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1em;
+    color: #4CAF50;
+    margin-top: 0.5em;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.whatsapp-button, .youtube-button {
+    background: linear-gradient(to right, #4CAF50, #45a049);
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    display: inline-block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-button:hover, .youtube-button:hover {
+    background: linear-gradient(to right, #45a049, #4CAF50);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:active, .youtube-button:active {
+    background: linear-gradient(to right, #388E3C, #4CAF50);
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media (max-width: 599px) {
+    .product {
+        width: 48%; /* Два товара в ряду на мобильных устройствах */
+    }
+}
+
+@media (min-width: 600px) and (orientation: portrait) {
+    .product {
+        width: 48%; /* Два товара в ряду на планшетах в портретном режиме */
+    }
+}
+
+@media (min-width: 600px) and (orientation: landscape) {
+    .product {
+        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
+    }
+}
+
+@media (min-width: 900px) {
+    .product {
+        width: 23%; /* Четыре товара в ряду на компьютерах */
+    }
+}
 
