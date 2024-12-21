@@ -105,30 +105,13 @@ header {
 
 @media (min-width: 900px) {
     .product {
-        width: 23%;
+        width: 31%;
     }
 }
 
-@media (max-width: 599px) {
+@media (min-width: 1200px) {
     .product {
-        width: 90%;
-    }
-
-    .product img {
-        height: 200px; /* Уменьшенная высота для мобильных устройств */
-    }
-
-    .product-name {
-        font-size: 1em;
-    }
-
-    .product-price {
-        font-size: 0.9em;
-    }
-
-    .whatsapp-button, .youtube-button {
-        padding: 0.5em 1em;
-        font-size: 0.9em;
+        width: 23%;
     }
 }
 
