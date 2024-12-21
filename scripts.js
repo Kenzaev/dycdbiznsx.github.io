@@ -55,6 +55,5 @@ document.addEventListener('DOMContentLoaded', function() {
     searchBar.addEventListener('input', function() {
         displayProducts(searchBar.value);
     });
-
     displayProducts();
 });
