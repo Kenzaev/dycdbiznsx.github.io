@@ -103,21 +103,21 @@ header {
     }
 }
 
-@media (min-width: 600px) and (orientation: portrait) {
+@media (min-width: 600px) and (max-width: 799px) {
     .product {
-        width: 45%; /* Два товара в ряду на планшетах в портретном режиме */
+        width: 45%; /* Два товара в ряду на планшетах */
     }
 }
 
-@media (min-width: 600px) and (orientation: landscape) {
+@media (min-width: 800px) and (max-width: 1199px) {
     .product {
-        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
+        width: 30%; /* Три товара в ряду на небольших экранах компьютеров */
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1200px) {
     .product {
-        width: 23%; /* Четыре товара в ряду на компьютерах */
+        width: 23%; /* Четыре товара в ряду на больших экранах компьютеров */
     }
 }
 
