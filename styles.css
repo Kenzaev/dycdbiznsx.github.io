@@ -29,7 +29,7 @@ header {
 }
 
 .product {
-    width: 100%; /* Один товар в ряду на мобильных устройствах */
+    width: 45%; /* Ширина для мобильных устройств */
     margin: 1%;
     border-radius: 8px;
     text-align: center;
@@ -47,9 +47,9 @@ header {
 }
 
 .product img {
-    width: 60%;
-    height: auto; /* Автоматическая высота изображений */
-    object-fit: cover;
+    width: 100%;
+    height: auto; /* Автоматическая высота для всех изображений */
+    object-fit: cover; /* Обрезать изображение, чтобы оно заполняло контейнер */
     border-radius: 8px;
 }
 
@@ -71,8 +71,7 @@ header {
     margin-top: 1em;
 }
 
-.whatsapp-button,
-.youtube-button {
+.whatsapp-button, .youtube-button {
     background: linear-gradient(to right, #4CAF50, #45a049);
     color: white;
     border: none;
@@ -85,15 +84,13 @@ header {
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
-.whatsapp-button:hover,
-.youtube-button:hover {
+.whatsapp-button:hover, .youtube-button:hover {
     background: linear-gradient(to right, #45a049, #4CAF50);
     transform: translateY(-2px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-.whatsapp-button:active,
-.youtube-button:active {
+.whatsapp-button:active, .youtube-button:active {
     background: linear-gradient(to right, #388E3C, #4CAF50);
     transform: translateY(0);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -102,20 +99,27 @@ header {
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 599px) {
     .product {
-        width: 100%; /* Один товар в ряду на мобильных устройствах */
+        width: 45%; /* Два товара в ряду на мобильных устройствах */
     }
 }
 
-@media (min-width: 600px) and (max-width: 899px) {
+@media (min-width: 600px) and (max-width: 799px) {
     .product {
-        width: 48%; /* Два товара в ряду на планшетах */
+        width: 45%; /* Два товара в ряду на планшетах */
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 800px) and (max-width: 1199px) {
     .product {
-        width: 23%; /* Четыре товара в ряду на компьютерах */
+        width: 30%; /* Три товара в ряду на небольших экранах компьютеров */
     }
 }
+
+@media (min-width: 1200px) {
+    .product {
+        width: 23%; /* Четыре товара в ряду на больших экранах компьютеров */
+    }
+}
+
 
 
