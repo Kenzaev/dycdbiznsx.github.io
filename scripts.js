@@ -59,4 +59,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Отображение товаров при загрузке страницы
     displayProducts();
 });
-
