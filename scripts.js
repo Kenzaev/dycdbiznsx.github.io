@@ -56,7 +56,6 @@ document.addEventListener('DOMContentLoaded', function() {
         displayProducts(searchBar.value);
     });
 
-    // Отображение товаров при загрузке страницы
     displayProducts();
 });
 
