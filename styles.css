@@ -99,25 +99,25 @@ header {
 /* Медиа-запросы для адаптивного дизайна */
 @media (max-width: 599px) {
     .product {
-        width: 90%; /* Один товар в ряду на мобильных устройствах */
+        width: 48%; /* Два товара в ряду на мобильных устройствах */
     }
 }
 
-@media (min-width: 600px) and (max-width: 799px) {
+@media (min-width: 600px) and (orientation: portrait) {
     .product {
-        width: 48%; /* Два товара в ряду на планшетах */
+        width: 48%; /* Два товара в ряду на планшетах в портретном режиме */
     }
 }
 
-@media (min-width: 800px) and (max-width: 1199px) {
+@media (min-width: 600px) and (orientation: landscape) {
     .product {
-        width: 30%; /* Три товара в ряду на небольших экранах компьютеров */
+        width: 23%; /* Четыре товара в ряду на планшетах в горизонтальном режиме */
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     .product {
-        width: 23%; /* Четыре товара в ряду на больших экранах компьютеров */
+        width: 23%; /* Четыре товара в ряду на компьютерах */
     }
 }
 
