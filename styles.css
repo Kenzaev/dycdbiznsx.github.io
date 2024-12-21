@@ -67,6 +67,7 @@ header {
 
 .button-container {
     display: flex;
+    flex-direction: column; /* Кнопки расположены вертикально */
     justify-content: space-between;
     margin-top: 1em;
 }
@@ -82,6 +83,7 @@ header {
     display: inline-block;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 0.5em; /* Отступ между кнопками */
 }
 
 .whatsapp-button:hover, .youtube-button:hover {
@@ -100,6 +102,14 @@ header {
 @media (min-width: 600px) {
     .product {
         width: 48%;
+    }
+
+    .button-container {
+        flex-direction: row; /* Кнопки расположены горизонтально */
+    }
+
+    .whatsapp-button, .youtube-button {
+        margin-bottom: 0; /* Убираем отступ между кнопками */
     }
 }
 
