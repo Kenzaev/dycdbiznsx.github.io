@@ -29,7 +29,7 @@ header {
 }
 
 .product {
-    width: 48%; /* Ширина для мобильных устройств */
+    width: 25%; /* Ширина для мобильных устройств */
     margin: 1%;
     border-radius: 8px;
     text-align: center;
